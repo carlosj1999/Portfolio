@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%load static%}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Carlos Ibanez | Junior Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/style_portfolio.css' %}?v=1.0">
+  </head>
+  <body class="resume">
+    <a class="btn download-link" href="{%static 'Resume 2024.pdf'%}" download>Download PDF</a>
+    <!-- //  INTRO  // -->
+    <header>
+      <div class="content-wrapper">
+        <h1>Carlos Ibanez</h1>
+        <h2>Junior Software Developer</h2>
+      </div>
+    </header>
+
+    <main class="content-wrapper">
+      <!-- //  PROFILE  // -->
+      <section class="resume-section">
+        <h2>Profile</h2>
+        <p>I am a passionate and dedicated computer science graduate from Florida International University, holding a Bachelor’s degree in Computer Science with a strong academic record (GPA: 3.75/4.0) and recognition on the Dean’s List. My education has provided me with a solid foundation in key areas such as Artificial Intelligence, Software Engineering and Data Mining.</p>
+        
+        <a href="{% url 'home' %}">Back to homepage</a>
+      </section>
+
+      <!-- //  PROJECTS  // -->
+      <section class="resume-section">
+        <h2>Projects</h2>
+        <p>View selected projects below. More information can be found at <a href="https://github.com/carlosj1999" target="_blank">github.com/carlosj1999</a>.</p>
+
+        <section class="project-item">
+          <img src="{%static 'images/privnote.png'%}" alt="Private Note">
+          <h3>Private Note</h3>
+          <p>The Privnote app is a Django-based web application that allows users to create and share secure, self-destructing notes. It features customizable expiration times and one-time viewing options for enhanced privacy. The app provides a simple interface for creating notes, generating unique links, and managing the lifecycle of sensitive information, making it an ideal solution for sharing temporary, confidential messages.</p>
+          <a class="btn" href="{% url 'privnote:create_note'%}" target="_blank">Test It</a>
+          <a class="btn" href="https://github.com/carlosj1999/Private-Note" target="_blank">GitHub</a>
+        </section>
+
+        <section class="project-item">
+          <img src="{%static 'images/ip_aggregator.png'%}" alt="IP Aggregator">
+          <h3>IP Aggregator</h3>
+          <p>The IP Aggregator is a Django web application that efficiently consolidates and formats lists of IP addresses. It accepts various IP input formats, aggregates them into optimized network ranges, and outputs the results in user-selected formats. The app streamlines IP address management tasks with a simple, user-friendly interface.</p>
+          <a class="btn" href="{% url 'ip_aggregator:index'%}" target="_blank">Test It</a>
+          <a class="btn" href="https://github.com/carlosj1999/IP_Aggregator" target="_blank">GitHub</a>
+        </section>
+
+        <div class="project-wrapper">
+          <section class="project-item">
+            <img src="{%static 'images/nandiasgarden.jpg'%}" alt="Nandia's Garden Site in Django">
+            <h3>Nandia's Garden Site in Django</h3>
+            <p>This project is a comprehensive web application for a pizzeria, developed using Django as the primary framework. I also utilized HTML and CSS for the front-end design. Includes a user interface for customers to interact with the menu, place online orders, and leave reviews, as well as a worker interface for managing orders and updating the menu.</p>
+            <a class="btn" href="https://github.com/carlosj1999/Django/tree/acc5bf954d40f857d65b63e978c05620ea389973/nandiasgarden-project" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/learning/django-forms?contextUrn=urn%3Ali%3AlyndaLearningPath%3A5d546c44498e876bef6651ba&u=42567804" target="_blank">LinkedIn</a>
+          </section>
+
+
+          <section class="project-item">
+            <img src="{%static 'images/gymder image.png'%}" alt="Gymder project">
+            <h3>Gymder</h3>
+            <p>The Gym Buddy Matching App, aims to connect individuals with similar fitness goals and schedules. I focus on backend development using Django and Python. My responsibilities include architecting the database schema, implementing user authentication.</p>
+            <a class="btn" href="https://github.com/PizzaMGx/gymder" target="_blank">GitHub</a>
+          </section>
+
+          <section class="project-item">
+            <img src="{%static 'images/django image.jpg'%}" alt="Django 1st project">
+            <h3>Django WorkSpace</h3>
+            <p>Developed a comprehensive book management system with Django, allowing users to create, edit, and list books, all secured by an authentication system. The project features dynamic templates, efficient ORM integration, and class-based views for clean and maintainable code.</p>
+            <a class="btn" href="https://github.com/carlosj1999/Django/tree/acc5bf954d40f857d65b63e978c05620ea389973/django%20practice.code-workspace" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/learning/django-essential-training?contextUrn=urn%3Ali%3AlyndaLearningPath%3A5d546c44498e876bef6651ba&u=42567804" target="_blank">LinkedIn</a>
+          </section>
+          
+          <section class="project-item">
+            <img src="{%static 'images/PHP & MySQL_ Server-side Web Development.jpg'%}" alt="PHP-MySQL">
+            <h3>PHP-MySQL Learning Project</h3>
+            <p>This GitHub repository provides PHP scripts for CRUD operations on a MySQL database, including secure interactions with prepared statements. Key scripts cover table creation, data insertion, updates, filtering, and ordering, with `createMySQL_DB.php` for database setup and `index.php` as the main entry point. It serves as a robust resource for developers working with PHP and MySQL.</p>
+            <a class="btn" href="https://github.com/carlosj1999/PHP-MySQL/tree/50f94a00187b8ff38c3f00fe54dba02ccdd87027/PHP-MySQL%20Learning%20Project" target="_blank">GitHub</a>
+          </section>
+        </div>
+      </section>
+
+      <!-- //  WORK EXPERIENCE  // -->
+      <section class="resume-section">
+        <!-- Start content edits below this line.  -->
+        <h2>Work Experience</h2>
+        <p>My complete work history is available on <a href="https://www.linkedin.com/in/carlos-ibanez99" target="_blank">LinkedIn</a>.</p>
+
+        <section class="work-item">
+          <div class="work-details">
+            <h3>Intern – Data Engineering & Data Analytics </h3>
+            <p>BELLE FLEUR TECHNOLOGIES</p>
+            <p>Apr 2021 - Aug 2021</p>
+          </div>
+          
+          <div class="work-summary">
+            <p>Hands-on experience in commercial scenarios, both theory and practical applications, enhancing knowledge of AWS. Create and manage databases, ensuring efficient data storage and retrieval.
+              ● Technical environment: AWS, QuickSight, MySQL</p>
+          </div>
+        </section>
+  
+        <section class="work-item">
+          <div class="work-details">
+            <h3>Python Developer </h3>
+            <p>TrueIT </p>
+            <p>Feb 2022 - Aug 2023</p>
+          </div>
+          
+          <div class="work-summary">
+            <p>Optimized Python development using open-source frameworks and integrated AWS services. ● Technical environment: AWS, Python Linux, Django</p>
+          </div>
+        </section>
+  
+        <section class="work-item">
+          <div class="work-details">
+            <h3>Life and Safety Maintenance Mechanic II </h3>
+            <p>FLORIDA INTERNATIONAL UNIVERSITY</p>
+            <p>Oct 2021 - Present</p>
+          </div>
+
+          <div class="work-summary">
+            <p>Maintain and repair all life safety equipment to support University Research status.
+              ● Technical environment: Teamwork, problem-solving skills, analytical capabilities</p>
+          </div>
+        </section>
+      </section>
+
+
+      <!-- //  EDUCATION & CERTIFICATIONS  // -->
+      <section class="resume-section">
+        <!-- Start content edits below this line.  -->
+        <h2>Education</h2>
+
+        <section class="education-item">
+          <h3>Florida International University - Miami, Florida</h3>
+          <p>Bachelors’ in Computer Science, 2024</p>
+          <p>Cumulative GPA: 3.75/4.0; Dean’s List</p>
+          <p>Relevant Coursework: Discrete Structure; Data Structures; Logics for CS; Algorithms; Artificial Intelligence; Software
+          Engineering; Natural language processing; Advance Database Management; Data Mining; Cybersecurity</p>
+        </section>
+  
+        <section class="education-item">
+          <h3>Miami Dade College - Miami, Florida</h3>
+          <p>Associate’s in Arts Computer Science, 2019-2022 </p>
+          <p>Cumulative GPA: 3.88/4.0; Dean’s List</p>
+        </section>
+  
+        <section class="education-item">
+          <h3>GENERATION USA - Online</h3>
+          <p>Jr. Cloud Practitioner, 2020-2021</p>
+          <p>Bootcamp encompassed hands-on knowledge of Linux, Python, Terraform, DevOps and AWS Cloud technologies.
+            Coursework culminated in AWS Cloud Practitioner certification in March,2021.</p>
+        </section>
+      </section>
+
+      <section class="certification-section">
+        <h2>Certification</h2>
+        <section class="Certificate">
+          <img src="{%static 'images/Azure.png'%}" alt="Microsoft-Certification">
+
+          <img src="{%static 'images/AWS.png'%}" alt="AWS-Certification">
+        </section>
+
+      </section>
+
+    </main>
+
+
+    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+    <footer>
+      <p>© 2024 by Carlos Ibanez |  <a href="cjibanez1999@gmail.com">cjibanez1999@gmail.com</a></p>
+
+      <ul class="socials">
+          <a href="https://www.linkedin.com/in/carlos-ibanez99" target="_blank"><img src="{%static 'images/Linkedin icons for free download | Freepik.jpg'%}" alt="My LinkedIn profile"></a>
+        </li>
+        <li>
+          <a href="https://github.com/carlosj1999" target="_blank"><img src="{% static 'images/Github Logo PNG Vector (SVG) Free Download.jpg' %}" alt="My GitHub profile"></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
