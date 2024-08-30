@@ -51,8 +51,8 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #3c8453;
-    border-bottom: 2px solid #3c8453;
-    padding-bottom: 10px;
+    /* border-bottom: 2px solid #3c8453;
+    padding-bottom: 10px;*/
 }
 
 h3 {
@@ -114,7 +114,7 @@ footer a:hover {
 
 
 /* HOME
-------------------------------------*/
+------------------------------------
 .home {
     background: url(../images/Unknown.jpg) no-repeat;
     background-size: cover;
@@ -136,7 +136,7 @@ footer a:hover {
         padding: 20px;
     }
 }
-
+*/
 
 /* RESUME
 ------------------------------------*/
