@@ -6,6 +6,7 @@
 __pycache__/
 /node_modules/
 /venv/
+/staticfiles/
 
 # Ignore environment variables and other sensitive files
 .env
