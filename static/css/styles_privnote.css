@@ -255,3 +255,44 @@ label {
     margin-right: 8px;
 }
 
+.copy-button {
+    background-color: #FF6B6B;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+}
+
+.copy-button:active {
+    background-color: #3e8e41;
+}
+
+/*
+.copy-button {
+    background-color: #FF6B6B;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #E04E4E;
+}
+*/
