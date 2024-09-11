@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-c1)wn@=d&h#-py65x-bkr37tmgx#6(_+fsj&4d!$85!p!hac-4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+#'127.0.0.1'
 ALLOWED_HOSTS = ['localhost', '137.184.225.218', 'carlosjportfolio.com']
 
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "resume",
     "ip_aggregator",
     "privnote",
+    "shortener",
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,6 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static') ]
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+LOGOUT_REDIRECT_URL = '/shortener/'
+LOGIN_REDIRECT_URL = '/shortener/'
+
