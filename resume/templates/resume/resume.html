@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Carlos Ibanez | Software Developer</title>
     <link rel="stylesheet" type="text/css"  href="{% static 'css/style_portfolio.css' %}?v=1.0">
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J71RQKFK5G"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-J71RQKFK5G');
-</script>
+        gtag('config', 'G-J71RQKFK5G');
+    </script>
   </head>
 
   <body class="resume">
@@ -39,12 +39,21 @@
         <h2>PROJECTS</h2>
         <p>View selected projects below. More information can be found at <a href="https://github.com/carlosj1999" target="_blank">github.com/carlosj1999</a>.</p>
         <div class="project-wrapper">
+
         <section class="project-item">
           <img src="{%static 'images/privnote.png'%}" alt="Private Note">
           <h3>Private Note</h3>
           <p>The Privnote app is a Django-based web application that allows users to create and share secure, self-destructing notes. It features customizable expiration times and one-time viewing options for enhanced privacy. The app provides a simple interface for creating notes, generating unique links, and managing the lifecycle of sensitive information, making it an ideal solution for sharing temporary, confidential messages.</p>
           <a class="btn" href="{% url 'privnote:create_note'%}" target="_blank">Test It</a>
           <a class="btn" href="https://github.com/carlosj1999/Private-Note" target="_blank">GitHub</a>
+        </section>
+
+        <section class="project-item">
+          <img src="{%static 'images/URL-Shortener.png'%}" alt="URL-Shortener">
+          <h3>URL Shortener</h3>
+          <p>A Django-based web application that allows users to shorten long URLs and manage their shortened links. Users can create an account, log in, and view all the URLs they’ve shortened. The app verifies the validity of the provided URLs before shortening them and offers a fun, user-friendly interface with animated forms and validation feedback.</p>
+          <a class="btn" href="{% url 'shortener:shorten_url'%}" target="_blank">Test It</a>
+          <a class="btn" href="https://github.com/carlosj1999/URL-Shortener" target="_blank">GitHub</a>
         </section>
 
         <section class="project-item">

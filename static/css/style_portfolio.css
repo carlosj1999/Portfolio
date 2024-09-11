@@ -184,7 +184,7 @@ footer a:hover {
 }
 .project-item img {
     width: 300px;
-    min-height: 170px;
+    min-height: 230px;
     max-height: 250px;
 }
 @media screen and (min-width:860px) {
