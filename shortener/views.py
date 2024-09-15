@@ -48,6 +48,9 @@ def signup(request):
     else:
         form = UserCreationForm()  # Render the empty form when the request method is GET
 
+        if 'password_base_authentication' in form.fields:
+            del form.fields['password_base_authentication']
+            
     return render(request, 'registration/signup.html', {'form': form})  # Always return a response
 
 def user_links(request):
