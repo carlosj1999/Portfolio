@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .forms import CustomSignupForm
 
 
 def shorten_url(request):
@@ -39,18 +40,15 @@ def shorten_url(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomSignupForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)  # Automatically log the user in after signup
             messages.success(request, 'Account created successfully!')
             return redirect('shortener:shorten_url')  # Redirect to the home page or shorten URL page after successful signup
     else:
-        form = UserCreationForm()  # Render the empty form when the request method is GET
+        form = CustomSignupForm()  # Render the empty form when the request method is GET
 
-        if 'password_base_authentication' in form.fields:
-            del form.fields['password_base_authentication']
-            
     return render(request, 'registration/signup.html', {'form': form})  # Always return a response
 
 def user_links(request):
