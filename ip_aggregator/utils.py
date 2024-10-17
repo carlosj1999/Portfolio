@@ -34,11 +34,8 @@ def aggregate_ip_addresses(ip_addresses, output_format='cidr', why_blocked=None,
     cleaned_ip_addresses = clean_input(ip_addresses)
     
     # Split the cleaned input into lines
-    ip_list = cleaned_ip_addresses.split('\n')
-    
-    # Split the input into lines and remove any empty lines
-    #ip_list = [line.strip() for line in ip_addresses.split('\n') if line.strip()]
-    
+    ip_list = cleaned_ip_addresses.split('\n')    
+
     # Convert IP addresses and ranges to networks
     networks = []
     for ip in ip_list:
@@ -99,4 +96,47 @@ if __name__ == "__main__":
     192.168.2.1
     """
     print(aggregate_ip_addresses(ip_list, output_format='cidr'))
+    
+    
+
+#API 
+
+def aggregate_ip_addresses_json(ip_addresses, output_format='cidr', why_blocked=None, asn_code=None):
+    """ Aggregate IP addresses and format them according to the specified output format """
+    
+    # Step 1: Clean the input IP addresses
+    cleaned_ip_addresses = clean_input(ip_addresses)
+    
+    # Step 2: Split the cleaned input into a list of IP addresses
+    ip_list = cleaned_ip_addresses.split('\n')
+    
+    # Step 3: Initialize the result list for structured output
+    result = []
+    
+    # Step 4: Loop over the IP addresses, process them, and apply the selected format
+    for ip in ip_list:
+        # Handle formatting based on the specified output format
+        if output_format == 'cidr':
+            formatted_ip = ip_network(ip, strict=False).with_prefixlen
+        elif output_format == 'mask':
+            formatted_ip = ip_network(ip, strict=False).with_netmask
+        elif output_format == 'range':
+            # Example of range aggregation, assuming a start and end IP range
+            network = ip_network(ip, strict=False)
+            formatted_ip = f"{network.network_address}-{network.broadcast_address}"
+        else:
+            # Default to CIDR if format is not recognized
+            formatted_ip = ip
+        
+        # Create a dictionary for each IP address
+        entry = {
+            "ip_address": formatted_ip,
+            "why_blocked": why_blocked if why_blocked else None,
+            "asn_code": f"AS{asn_code}" if asn_code else None
+        }
+        result.append(entry)
+    
+    # Step 5: Return the result as a list of dictionaries
+    return result
+
     

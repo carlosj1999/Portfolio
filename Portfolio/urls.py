@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from resume import urls, views
+from ip_aggregator.API import urls_api
 
 
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
     path('privnote/', include('privnote.urls', namespace='privnote')),
     path('shortener/', include('shortener.urls', namespace='shortener')),
     
+    path('api/', include('ip_aggregator.API.urls_api')),
 ]
